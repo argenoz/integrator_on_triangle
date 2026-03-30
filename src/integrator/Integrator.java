@@ -155,7 +155,7 @@ public class Integrator {
          Ariphmetical ax,ay,bx,by,cx,cy;
          ax = (new Ariphmetical(-1)).cast(10);
          ay = (new Ariphmetical(2)).cast(10);
-         bx = (new Ariphmetical(1)).cast(10);
+         bx = (new Ariphmetical(6)).cast(10);
          by = (new Ariphmetical(2)).cast(10);
          cx = (new Ariphmetical(4)).cast(10);
          cy = (new Ariphmetical(4)).cast(10);
