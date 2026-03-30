@@ -154,11 +154,11 @@ public class Integrator {
          Ariphmetical inti;
          Ariphmetical ax,ay,bx,by,cx,cy;
          ax = (new Ariphmetical(-1)).cast(10);
-         ay = (new Ariphmetical(2)).cast(10);
+         ay = (new Ariphmetical(-31,2)).cast(10);
          bx = (new Ariphmetical(6)).cast(10);
          by = (new Ariphmetical(2)).cast(10);
          cx = (new Ariphmetical(4)).cast(10);
-         cy = (new Ariphmetical(4)).cast(10);
+         cy = (new Ariphmetical(4,19)).cast(10);
          Ariphmetical[][] ABC = new  Ariphmetical[3][2];
          ABC[0][0]=ax;
          ABC[0][1]=ay;
@@ -168,9 +168,9 @@ public class Integrator {
          ABC[2][1]=cy;
          Ariphmetical n = (new Ariphmetical(2)).cast(8),
                  m = (new Ariphmetical(3)).cast(8);
-         Integrator i = new Integrator(ABC);
-         inti = i.integrate(n, m);
-         System.out.print(inti+"\t integrale\n");
+         inti = (new Integrator(ABC)).integrate(n, m);
+         System.out.print(inti+"\t integrale\n"+inti.cast(6)+"\n");
+         
          //System.out.print(Ariphmetical.pow(ax,n));
     
     }
