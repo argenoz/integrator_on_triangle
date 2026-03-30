@@ -1,2 +1,7 @@
-# integrator_on_triangle
-integrator on triangle for the monomial of two variable 
+this simple integrator needs extJavaLib.
+
+
+have a good exp!
+
+
+
