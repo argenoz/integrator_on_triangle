@@ -33,15 +33,18 @@ def int_rim(a, b, c, n, m, n_alpha, m_beta, q = lambda x,y:1):
             alpha = alpha+dalpha
         '''
         summ = summ+suma*dalpha
-    print(Jacob)
+    #print(Jacob)
     return summ*dbeta*Jacob
 
-n = 5
-m = 3
+ABC=[[-1,-31/2.0],[6,2],[4,4/19.0]]
+n=4
+m=24-14
 an = 500*2
 bm = 500*2
-ABC = [[-3,2],[6, 2], [4,  4/3.0]]
-ABC = [[-3,3],[1,1],[-2,3]]
+#ABC=[[0,1],[1,0],[0,0]]
+#ABC = [[-3,2],[6, 2], [4,  4/3.0]]
+#ABC = [[-3,3],[1,1],[-2,3]]
+#ABC=[[0,1],[1,0],[0,0]]
 ABC = [ [float(ABC[i][j]) for j in range(2)] for i in range(3)]   
-i = int_rim(ABC[0],ABC[1],ABC[2],n,m,an,bm,lambda x,y:x*math.sin(y))
+i = int_rim(ABC[0],ABC[1],ABC[2],n,m,an,bm)
 print(i)

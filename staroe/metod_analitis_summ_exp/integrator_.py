@@ -122,10 +122,9 @@ print(float(i),"symbolic int")
 print(abs(float(i)-i_))
 '''
 
-ABC=[[1,0],[0,0],[0,1]]
-n=14
+ABC=[[2,1],[1,2],[0,0]]
+n=12
 m=16
-print("qwe")
 x = SP.Symbol('x')
 y = SP.Symbol('y')
 f = x**n * y**m
@@ -145,7 +144,6 @@ print(float(i),"symbolic int")
 i_ =  Integrator(ABC).integrate(n,m)
 print(i_)
 #print(qwe.Cnk_)
-
 
 
 

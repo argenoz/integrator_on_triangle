@@ -1,0 +1,3 @@
+v dvuh raznyh cmd:
+1) java -jar integrator.jar
+2) python integrator_.py
