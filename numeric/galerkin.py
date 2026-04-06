@@ -1,5 +1,6 @@
 import riman as RI
 import sympy as SP
+import integrator_ as INTI
 
 '''
     dlya 
@@ -49,6 +50,7 @@ class Galerkin:
     
     '''
     def __init__(self,ABC,Fiq,NM=[1000,1000]):
+        self.ABC = ABC
         self.cx = ABC[2][0]
         self.cy = ABC[2][1]
         self.Ax = ABC[0][0]-self.cx
@@ -62,6 +64,8 @@ class Galerkin:
         self.dbeta = 1/NM[0]
         self.dalphas=[ (1-(0.5+i)*self.dbeta)/NM[1]   for i in range(NM[0])]
         self.lNM = [range(self.NM[0]),range(self.NM[1])]
+    def do_analitic(self,f):
+        return INTI.Integrator(self.ABC).integrate(f[0],f[1])
     def do_riman(self,f):
         summ=0
         for i in self.lNM[0]:
