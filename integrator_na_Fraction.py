@@ -32,30 +32,31 @@ class Integrator:
         return self.Cnk(n,k)
     def __init__(self,abc):
         self.abc=DPC(abc)
-        self.ax = abc[0][0]
-        self.ay = abc[0][1]
-        self.bx = abc[1][0]
-        self.by = abc[1][1]
-        self.cx = abc[2][0]
-        self.cy = abc[2][1]
+        self.ax = Fraction(abc[0][0])
+        self.ay = Fraction(abc[0][1])
+        self.bx = Fraction(abc[1][0])
+        self.by = Fraction(abc[1][1])
+        self.cx = Fraction(abc[2][0])
+        self.cy = Fraction(abc[2][1])
+        
         self.Kx = self.bx-self.cx
         self.Ky = self.by-self.cy
         self.acx = self.ax-self.cx
         self.acy = self.ay-self.cy
         self.J = (self.ax-self.cx)*(self.by-self.cy)-(self.ay-self.cy)*(self.bx-self.cx)
-        self.Cnk_=[[1],[1,1]]
+        self.Cnk_=[[Fraction(1)],[Fraction(1),Fraction(1)]]
     def integrate(self,n,m):
         S=[Fraction(0) for i in range(5)]
-        print(type(S[0]))
+        #print(type(S[0]))
         ln,lm = range(n+1),range(m+1)
         for p in ln:
             S[1]=Fraction(0)
             n_p = n - p
-            theta1 = (self.Kx**p)*self.C_n_k(n,p)
+            theta1 = (Fraction(self.Kx)**p)*self.C_n_k(n,p)
             l_n_p = range(n_p+1)
             for q in lm:
                 S[2]=Fraction(0)
-                theta = theta1*(self.Ky**q)*self.C_n_k(m,q)
+                theta = theta1*(Fraction(self.Ky)**q)*self.C_n_k(m,q)
                 m_q = m - q
                 l_m_q =range(m_q+1)
                 
@@ -67,7 +68,7 @@ class Integrator:
                     for u in l_m_q:
                         uv1 = v+u+1
                         S[4]=Fraction(0)
-                        La = La1*self.C_n_k(m_q,u)*self.acy**u*self.cy**(m_q-u)/(float(uv1))
+                        La = La1*self.C_n_k(m_q,u)*self.acy**u*self.cy**(m_q-u)/(Fraction(uv1))
                         
                         for s in range(uv1+1):
                             tmp = self.C_n_k(uv1,s)/(pq1+s)
@@ -122,11 +123,18 @@ print(float(i),"symbolic int")
 
 print(abs(float(i)-i_))
 '''
+a = 123
+c=2
+b = 2.3
+a = Fraction(a)
+#print(type(a+Fraction(31)))
+#print(type(a+b))
+#print(type(a+c))
 
 ABC=[[1,0],[0,0],[0,1]]
-n=14
+n=20
 m=16
-print("qwe")
+#print("qwe")
 x = SP.Symbol('x')
 y = SP.Symbol('y')
 f = x**n * y**m
