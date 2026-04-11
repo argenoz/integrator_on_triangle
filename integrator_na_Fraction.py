@@ -123,7 +123,6 @@ print(float(i),"symbolic int")
 
 print(abs(float(i)-i_))
 '''
-'''
 a = 123
 c=2
 b = 2.3
@@ -155,4 +154,7 @@ print(float(i),"symbolic int")
 i_ =  Integrator(ABC).integrate(n,m)
 print(i_)
 #print(qwe.Cnk_)
-'''
+
+
+
+
