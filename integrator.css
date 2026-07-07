@@ -1,4 +1,4 @@
-
+vyvody
 
 
 .blo 
@@ -76,25 +76,37 @@
 	
 }
 
+.knopka2
+{
+	background-color:#0020f7;
+	height:90%;
+	width:90%;
+	left:5%;
+	top:5%;
+}
+
+.knopka2:hover
+{
+	background-color:#008844;
+	
+}
+
+
 
 .rmenu
 {
 	display:grid;
 	grid-template-columns:100%;
-	grid-template-rows: 20% auto;
+	grid-template-rows: 50% auto;
 }
 
 
 
 .vyvody
 {
-	display:grid;
-	grid-template-columns:100%;
-	grid-template-rows: 50% auto;
+	display:flex;
+			flex-direction:column;
 	
 	
 }
-
-
-
 

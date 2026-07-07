@@ -13,51 +13,54 @@
 				<center>Данные</center>
 					<div class="inputa">
 						<div>Координата x точки A</div>
-						<input id="AX" type="textbox"/>
+						<input value="0" id="AX" type="textbox"/>
 					</div>
 					<div class="inputa">
 						<div>Координата y точки A</div>
-						<input id="AY" type="textbox"/>
+						<input value="1" id="AY" type="textbox"/>
 					</div>
 					<div class="inputa">
 						<div>Координата x точки B</div>
-						<input id="BX" type="textbox"/>
+						<input value="1" id="BX" type="textbox"/>
 					</div>
 					<div class="inputa">
 						<div>Координата y точки B</div>
-						<input id="BY" type="textbox"/>
+						<input value="0" id="BY" type="textbox"/>
 					</div>
 					<div class="inputa">
 						<div>Координата x точки C</div>
-						<input id="CX" type="textbox"/>
+						<input value="0" id="CX" type="textbox"/>
 					</div>
 					<div class="inputa">
 						<div>Координата y точки C</div>
-						<input id="CY" type="textbox"/>
+						<input value="0" id="CY" type="textbox"/>
 					</div>
 					<div class="inputa">
 						<div>функция интегрирования</div>
-						<input id="funka" type="textbox"/>
+						<input value="Math.exp(x)/(Math.exp(x)+Math.exp(y))" id="funka" type="textbox"/>
 					</div>
-					<div class="knopka"  onclick="delo()">
+					<div class="knopka"  onclick="raschet()">
 						Вычислить
+					</div>
+					<div class="knopka2"  onclick="showTheCode()">
+						Увидеть весь код
 					</div>
 					
 			</div>
 			<div class="rmenu">
 				<div class="vyvody">
-				<center><div>Через полином: </div><div id="resultat_p">
+				<center><div>Через полином[Все мономы a^i b^j, где i,j из {0,1,2,3} ]: </div><div id="resultat_p16">
 				qweewq
 				</div></center>
-				<center><div>Через сумму: </div><div id="resultat_r">
+				<center><div>Через полином[степень 3. P(a,b)=C_1 + C_2 a + C_3 b + C_4 a^2 + C_5 ab + C_6 b^2 + C_7 a^3 + C_8 a^2 b + C_9 a b^2 + C_10 b^3  ]: </div><div id="resultat_p3">
 				qweewq
 				</div></center>
+				<center><div>Через полином[степень 1. P(a,b)=C_1 + C_2 a + C_3 b]: </div><div id="resultat_p1">
+				qweewq
+				</div></center>
+				
 				</div>
-				<center><div id="primer"> Примеры:
-				<a href="./primer.png" target="blank">картинка 1 </a><br/>
-				<a href="./primer2.png" target="blank">картинка 2 </a><br/>
-				<a href="./analiticheskaya_formula.pdf" target="blank">Вывод аналитической формулы </a>
-				</div></center>
+				<div align="left" id="dlya_theCode"></div>
 			</div>
 		</div>
 	</div>
