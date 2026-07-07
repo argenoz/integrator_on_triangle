@@ -76,6 +76,11 @@ let TTT = 0;
 
 function showTheCode()
 {
+	let q = document.createElement("a");
+	q.setAttribute("download","");
+	q.setAttribute("href","kod/integrator_all.c");
+	q.click();
+	/*
 	let q = document.createElement("div");
 	if(document.getElementById("theCode")!=undefined) return;
 	q.setAttribute("id","theCode");
@@ -93,7 +98,7 @@ function showTheCode()
 		
 	};
 	xhr.send();
-	
+	*/
 }
 
 
