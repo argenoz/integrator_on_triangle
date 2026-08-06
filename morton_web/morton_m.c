@@ -42,7 +42,7 @@ uint32_t expa_16_32(uint16_t y)
 uint32_t expa_32_64(uint32_t y)
 {
 	uint64_t x = y;
-	x = (x<<16)&M_32_16;//32->na dva
+	x = (x<<16)&M_64_32;//32->na dva
 	x = (x|(x<<8))&M_64_16;//16 -> na dva
 	x = (x|(x<<4))&M_64_8;//8 -> na dva
 	x = (x|(x<<2))&M_64_4;//4->na dva
