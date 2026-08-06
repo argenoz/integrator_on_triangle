@@ -6,7 +6,7 @@ unsigned long morton(unsigned int a, unsigned int b)
 {
 unsigned long ans=0;
 unsigned int i,l;
-l = sizeof(unsigned int);
+l = 8*sizeof(unsigned int);
 i=0;
 while(i<l)
 	{
